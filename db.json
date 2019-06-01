@@ -29,6 +29,30 @@
       "precioPlatillo": "12000",
       "categoria": "cortes",
       "id": 5
+    },
+    {
+      "nombrePlatillo": "hola",
+      "precioPlatillo": "23333",
+      "categoria": "postre",
+      "id": 6
+    },
+    {
+      "nombrePlatillo": "Prueba",
+      "precioPlatillo": "2222222",
+      "categoria": "postre",
+      "id": 7
+    },
+    {
+      "nombrePlatillo": "prueba 2",
+      "precioPlatillo": "12345",
+      "categoria": "cortes",
+      "id": 8
+    },
+    {
+      "nombrePlatillo": "Ensalada de pollo",
+      "precioPlatillo": "100000",
+      "categoria": "ensalada",
+      "id": 9
     }
   ]
 }

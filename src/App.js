@@ -11,17 +11,22 @@ import { async } from 'q';
 function App() {
 
   const [producto, guardarProducto] = useState([])
+  const [recargarProductos, guardarRecargarProductos] = useState(true);
 
   useEffect(() =>{
-    const consultarApi = async () => {
-      //consultar la api de json-server
-      let resultado = await axios.get("http://localhost:4000/resturant")
-      
-      guardarProducto(resultado.data);
-    }
+    if(recargarProductos){
+      const consultarApi = async () => {
+        //consultar la api de json-server
+        let resultado = await axios.get("http://localhost:4000/resturant")
+        
+        guardarProducto(resultado.data);
+      }
+      consultarApi();
 
-    consultarApi();
-  }, [])
+      //Cambiar a false la recarga de los productos
+      guardarRecargarProductos(false);
+    }
+  }, [recargarProductos])
 
   return (
     <div className="App">
@@ -36,7 +41,12 @@ function App() {
               />
             ) } 
           />
-          <Route exact path="/producto/nuevo" component={AgregarProducto} />
+          <Route exact path="/producto/nuevo" 
+          render={ () =>(
+            <AgregarProducto
+              guardarRecargarProductos = {guardarRecargarProductos}
+            />
+          )} />
           <Route exact path="/producto/:id" component={Producto} />
           <Route exact path="/productos/editar/:id" component={EditarProducto } />
         </Switch>

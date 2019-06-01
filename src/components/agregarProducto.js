@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import { async } from 'q';
 import { withRouter } from 'react-router-dom';
 
-const AgregarProducto = ({history}) => {
+const AgregarProducto = ({history, guardarRecargarProductos}) => {
 
     // state
     const [ nombrePlatillo, guardarNombre ] = useState('');
@@ -52,7 +52,8 @@ const AgregarProducto = ({history}) => {
       }
 
       //Redirigir al usuario a productos
-      history.push('./productos');
+      guardarRecargarProductos(true); 
+      history.push('/productos');
     }
 
     return (
