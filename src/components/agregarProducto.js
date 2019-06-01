@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Error from './error';
+import axios from 'axios';
+import { async } from 'q';
 
 const AgregarProducto = () => {
 
@@ -13,7 +15,7 @@ const AgregarProducto = () => {
       guardarCategoria(e.target.value);
     }
 
-    const agregarProducto = (e) =>{
+    const agregarProducto = async (e) =>{
       e.preventDefault();
       
       if(nombrePlatillo === '' || precioPlatillo === '' || categoria === ''){
@@ -24,6 +26,17 @@ const AgregarProducto = () => {
       guardarError(false)
 
       //Crear nuevo producto
+      try{
+        const resultado = await axios.post('http://localhost:4000/resturant', {
+          nombrePlatillo,
+          precioPlatillo,
+          categoria
+        });
+
+        console.log(resultado)
+      }catch (error){
+        console.log("error");
+      }
     }
 
     return (
