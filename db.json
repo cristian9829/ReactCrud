@@ -17,6 +17,18 @@
       "precioPlatillo": "324",
       "categoria": "postre",
       "id": 3
+    },
+    {
+      "nombrePlatillo": "Firjoles",
+      "precioPlatillo": "20.000",
+      "categoria": "cortes",
+      "id": 4
+    },
+    {
+      "nombrePlatillo": "Sancocho",
+      "precioPlatillo": "12000",
+      "categoria": "cortes",
+      "id": 5
     }
   ]
 }
