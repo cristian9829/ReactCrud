@@ -38,6 +38,7 @@ function App() {
             render={ () =>(
               <Productos
                 productos = {producto}
+                guardarRecargarProductos = {guardarRecargarProductos}
               />
             ) } 
           />

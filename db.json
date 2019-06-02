@@ -1,18 +1,6 @@
 {
   "resturant": [
     {
-      "precioPlatillo": "5000",
-      "nombrePlatillo": "Cheesecake",
-      "categoria": "postre",
-      "id": 1
-    },
-    {
-      "precioPlatillo": "300",
-      "nombrePlatillo": "Rib Eye 44g",
-      "categoria": "Cortes",
-      "id": 2
-    },
-    {
       "nombrePlatillo": "ewr",
       "precioPlatillo": "324",
       "categoria": "postre",
@@ -41,12 +29,6 @@
       "precioPlatillo": "2222222",
       "categoria": "postre",
       "id": 7
-    },
-    {
-      "nombrePlatillo": "prueba 2",
-      "precioPlatillo": "12345",
-      "categoria": "cortes",
-      "id": 8
     },
     {
       "nombrePlatillo": "Ensalada de pollo",
