@@ -58,6 +58,7 @@ function App() {
             return(
               <EditarProducto
                 producto = {productoEdit[0]}
+                guardarRecargarProductos = {guardarRecargarProductos}
               />
             )
           }} />
