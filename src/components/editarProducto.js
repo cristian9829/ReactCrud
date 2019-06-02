@@ -19,14 +19,25 @@ const EditarProducto = (props) =>{
   const editarProducto = async e =>{
     e.preventDefault();
 
+    //Validacion formulario
+    const nuevoNombrePlatillo = nombrePlatilloRef.current.value,
+          nuevoPrecioPlatillo = precioPlatilloRef.current.value;
+
+    if(nuevoPrecioPlatillo === '' || nuevoNombrePlatillo === '' || categoria === ''){
+      guardarError(true);
+      return false; 
+    }
+
+    guardarError(false);
+
     //Revisar si cambio la categoria de lo contrario asignar el mismo valor
     let categoriaPlatillo = (categoria === '') ? producto.categoria : categoria
     console.log(categoriaPlatillo)
     // Obtener los valores del formulario editados
 
     const editarPlatillo = {
-      precioPlatillo : precioPlatilloRef.current.value,
-      nombrePlatillo : nombrePlatilloRef.current.value,
+      precioPlatillo : nuevoPrecioPlatillo,
+      nombrePlatillo : nuevoNombrePlatillo,
       categoria : categoriaPlatillo
     }
 
